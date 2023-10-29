@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Encryption App</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        margin: 20px;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      label,
+      textarea,
+      select,
+      input,
+      button {
+        display: block;
+        margin: 10px 0;
+      }
+
+      select,
+      textarea,
+      input,
+      button {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      button {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      textarea {
+        height: 100px;
+        resize: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <label for="plainText">Plain Text:</label>
+      <textarea id="plainText" rows="10" cols="40"></textarea>
+      <label for="cipherText">Cipher Text:</label>
+      <textarea id="cipherText" rows="10" cols="40"></textarea>
+      <select id="encryptionType">
+        <option value="Copy">Copy</option>
+        <option value="Caesar">Caesar cipher</option>
+        <option value="Scytale">Scytale</option>
+      </select>
+      <label for="key">Key:</label>
+      <input type="text" id="key" name="key" />
+      <button onclick="encrypt()">Encrypt</button>
+      <button onclick="decrypt()">Decrypt</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
